@@ -1,6 +1,6 @@
 # RClone
 
-Wir benutzen am besten [RClone](https://rclone.org) um die Bilder für unser Bilderrahmen Projekt, aus einer Nextcloud zu holen.
+Wir benutzen am besten [RClone](https://rclone.org) um die Bilder für unser [Bilderrahmen Projekt](https://gitlab.tester.aipe.at/aph/bilderrahmen), aus einer Nextcloud zu holen.
 
 - [RClone Einstellungen für WebDAV - NextCloud](https://rclone.org/webdav)
 - [RClone Filter Optionen](https://rclone.org/filtering/#include-include-files-matching-pattern)

@@ -6,19 +6,18 @@
 
 - ***[RClone](RClone.md)*** installieren: `sudo apt-get install rclone`  
 
-- ***[Bilderrahmen](https://gitlab.tester.aipe.at/aph/bilderrahmen)*** nach dieser Anleitung installieren.
-  Anpassung an /etc/xdg/lxsession/LXDE-pi/autostart genügt:
+- ***[Bilderrahmen](PictureFrame.md)*** nach dieser Anleitung installieren.  
+  mit diesem Befehl kann man den Bilderrahnem manuel upgraden:  
 
-   ```bash
-   #@lxpanel --profile LXDE-pi
-   #@pcmanfm --desktop --profile LXDE-pi
-   #@xscreensaver -no-splash
-   #point-rpi
-   @xset s off
-   @xset -dpms
-   @xset dpms 0 0 0
-   @/home/pi/.local/bin/PictureFrame
-   ```
+  ```bash
+  sudo pip3 install (PictureFrame Package URL) --upgrade
+  ```
+
+  mit diesem Befehl kann man den Bilderrahnem mit der Konfigurationsdatei manuel starten:  
+
+  ```bash
+  PictureFrame /home/pi/PictureFrame
+  ```
 
 - ***Konfigurationsdatei vom Bilderrahmen***  
   Eine Beispieldokumentation findet sich unter: _~/.local/lib/python3.7/side-packages/PictureFrame/samples_  
@@ -34,7 +33,7 @@
   ```
 
   Die Konfigurationsdatei in Nano öffnen:  
-  `sudo nano ~/PictureFrame/PictureFrame.conf`
+  `sudo nano /home/pi/PictureFrame/PictureFrame.conf`
 
   Eine Zeile mit den Angaben der Bilder Ordner hinzufügen (am besten unterhalb der Zeile _#folders = ["/path/to/..._):  
   `folders = ["/home/pi/PictureFrame/User1", "/home/pi/PictureFrame/User2"]`
@@ -56,17 +55,19 @@
   Zur Einrichtung der Syncronisation, einfach `rclone config` eingeben und die Fragen beantworden.  
   Die Einstellungen einmal Testen mit: `rclone ls <Name>:`  
   Für die automatische Syncronisation mit Crontab `crontab -e` eingeben und die folgengen zeilen hinzufügen.
-  
+
   ```bash
   0 */4 * * * rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF}" User1: /home/pi/PictureFrame/User1
   0 */4 * * * rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF}" User2: /home/pi/PictureFrame/User2
   ```
-  
+
   Details dazu sind in der [Anleitung](RClone.md).  
-  
+
 - ***Bilder laden und neu starten***  
-  Einmal die Bilder manuel laden  
+  Einmal die Bilder manuel laden und danach den Pi neu starte.    
 
   ```bash
   rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF}" User1: /home/pi/PictureFrame/User1
+  rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF}" User2: /home/pi/PictureFrame/User2
+  sudo reboot now
   ```  
