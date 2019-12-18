@@ -3,6 +3,7 @@
 - ***[Raspbian mit Desktop](Raspbian.md)*** nach dieser Anleitung installieren.
 
 - ***[Midnight Commander](Midnight_Commander.md)*** installieren: `sudo apt-get install mc`  
+  Wird nicht unbedingt gebraucht. Kann aber manchmal sehr hilfreich sein.
 
 - ***[RClone](RClone.md)*** installieren: `sudo apt-get install rclone`  
 

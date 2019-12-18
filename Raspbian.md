@@ -78,4 +78,3 @@
     `<A1> Expand Filesystem`  
 15. Einmal neu starten: `sudo reboot now`  
 16. Fertig!
-
