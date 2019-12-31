@@ -11,13 +11,13 @@
   mit diesem Befehl kann man den Bilderrahnem manuel upgraden:  
 
   ```bash
-  sudo pip3 install (PictureFrame Package URL) --upgrade
+  pip3 install --user --extra-index-url https://pypiserver.tester.aipe.at PictureFrame --upgrade
   ```
 
   mit diesem Befehl kann man den Bilderrahnem mit der Konfigurationsdatei manuel starten:  
 
   ```bash
-  PictureFrame /home/pi/PictureFrame
+  PictureFrame --dir /home/pi/PictureFrame
   ```
 
 - ***Konfigurationsdatei vom Bilderrahmen***  
