@@ -23,7 +23,7 @@ Um nun eine Nextcloud einzurichten, folgende Antworten eingeben:
 n
 <Name>
 webdav
-https://<Nextcloud-Server-Adresse>/nextcloud/remote.php/webdav/<Bilder-Ordner>
+https://<Nextcloud-Server-Adresse>/remote.php/webdav/<Bilder-Ordner>
 nextcloud
 <Benutzername>
 y

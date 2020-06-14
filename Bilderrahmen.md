@@ -58,7 +58,7 @@
   Für die automatische Syncronisation mit Crontab `crontab -e` eingeben und die folgengen zeilen hinzufügen.
 
   ```bash
-  0 */4 * * * rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF}" User1: /home/pi/PictureFrame/User1
+  0 */4 * * * rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF,conf,CONF}" User1: /home/pi/PictureFrame/User1
   0 */4 * * * rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF}" User2: /home/pi/PictureFrame/User2
   ```
 
@@ -68,7 +68,7 @@
   Einmal die Bilder manuel laden und danach den Pi neu starte.    
 
   ```bash
-  rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF}" User1: /home/pi/PictureFrame/User1
+  rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF,conf,CONF}" User1: /home/pi/PictureFrame/User1
   rclone sync --include "*.{jpeg,jpg,gif,png,tga,tiff,JPEG,JPG,GIF,PNG,TGA,TIFF}" User2: /home/pi/PictureFrame/User2
   sudo reboot now
   ```  
